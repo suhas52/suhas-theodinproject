@@ -1,1 +1,19 @@
-/* Add CSS Styling */
+.imaclass {
+    background-color: lightcoral;
+}
+
+#oneid {
+    color: blue;
+    font-size: larger;
+}
+
+.twoclass {
+    font-size: medium;
+    background-color: lightcoral;
+}
+
+#twoid {
+    font-weight: bold;
+    background-color: green;
+    font-size: larger;
+}
