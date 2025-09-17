@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body { 
+    margin: 0; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.header-logo {
+    padding-left: 50px;
+}
+
+.header-links {
+    display: flex;
+    padding-right: 50px;
+    align-items: center;
+    gap: 20px;
+}
+
+.splitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splitter img {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.sec1 {
+    min-height: 50vh;
+}
+
+.sec1,
+.sec5 {
+    background-color: #1F2937;
+    color: white;
+}
+
+.randominfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.randominfo h2 {
+    font-size: 36px;
+    color: #1F2937
+}
+
+.infocards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.card {
+    max-width: 150px;
+}
+
+.card img {
+  display: block;             
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: solid blue 2px;
+}
+
+.sec3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    min-height: 25vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #1F2937;
+    max-width: 100vh;
+}
+
+.quoter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -20px;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.sec4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+.bluebox {
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    min-height: 15vh;
+    min-width: 90vh;
+    border-radius: 5px;
+    color: white;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.awesome {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 5px;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.awesome h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #f9faf8
+}
+
+.awesome p {
+    margin-top: -20px;
+    font-size: 18px;
+}
+
+.awesome button {
+    align-self: flex-start;
+}
+
+button {
+    border-radius: 5px;
+    background-color: #3882f6;
+    color: white;
+    border: solid white 1px;
+    font-size: 15px;
+}
+
+
+
+.sec5 {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
