@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPS</title>
+    <title>Rock Paper Scizzors</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <input id="userChoice" placeholder="Type something...">
-    <input type="button" value="Click me" onclick="play()">
+    <div class="cpu-section">
+        <img id="cpu-img" src="#">
+    </div>
+    <div class="mid-section">
+        <h2>Up there is the opponent's choice.</h2>
+        <h1>Click on the images below to choose yours!</h1>
+        <p>You: <span class="user_score"></span> Cpu: <span class="cpu_score"></span></p>
+    </div>
+    <div class="user-section">
+        <div class="button-container">
+            <img id="rock" src="images/rock.png">
+        </div>
+        <div class="button-container">
+            <img id="paper" src="images/paper.png">
+        </div>
+        <div class="button-container">
+            <img id="scizzors" src="images/scizzors.png">
+        </div>
+    </div>
 </body>
 </html>

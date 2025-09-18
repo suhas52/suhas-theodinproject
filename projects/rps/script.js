@@ -1,32 +1,25 @@
+const userSection = document.querySelector(".user-section");
+const cpuSection = document.querySelector(".cpu-section")
+const cpuImg = document.getElementById("cpu-img")
 const choices = ["rock", "paper", "scizzors"]
-const rules = {
-    rock: "scizzors",
-    paper: "rock",
-    scizzors: "paper"
+
+userSection.addEventListener("click", function (e) {
+  user_choice = e.target.id
+  console.log(user_choice)
+});
+
+function genCpuImg(cpuImg) {
+    let choice = choices[Math.floor(Math.random() * choices.length)];
+    if (choice === "rock") {
+        cpuImg.src = "images/rock.png"
+    }
+    if (choice === "paper") {
+        cpuImg.src = "images/paper.png"
+    }
+    if (choice === "scizzors") {
+        cpuImg.src = "images/scizzors.png"
+    }
+
 };
 
-function pickBtn() {
-    choice = Math.floor(Math.random() * choices.length);
-    return choices[choice];
-}
-
-
-function play() {
-    user_choice = document.getElementById("userChoice").value.toLowerCase();
-    if (choices.includes(user_choice)) {
-    cpu_choice = pickBtn();
-    if (user_choice === cpu_choice) {
-        alert("It's a draw!")
-    }
-    if (rules[user_choice] === cpu_choice) {
-        alert("You win!");
-    } else {
-        alert("CPU wins!");
-    }
-    location.reload()
-    }
-    else {
-        alert("Please choose from rock, paper or scizzors!");
-        location.reload()
-    }
-}
+console.log(genCpuImg(cpuImg))

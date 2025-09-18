@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    border: solid black 2px;
+}
+
+.cpu-section,
+.user-section {
+    min-height: 40vh;
+}
+
+.cpu-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-section {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-section {
+    display: flex;
+    flex-grow: 1;
+}
+
+.button-container {
+    min-width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
