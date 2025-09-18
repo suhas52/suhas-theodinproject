@@ -28,3 +28,15 @@ newp.textContent = "ME TOO!";
 newdiv.appendChild(newh1);
 newdiv.appendChild(newp);
 container.appendChild(newdiv)
+
+const btn = document.createElement("button");
+btn.textContent = "Click me!";
+
+function hello() {
+    btn.addEventListener("click", () => {
+        alert("Hello, World!");
+    });
+};
+
+newdiv.appendChild(btn)
+hello()
