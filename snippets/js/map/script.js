@@ -1,11 +1,10 @@
 const arr = [1, 2, 3, 4, 5];
 
-let addedArr = arr.map((num) => num + 1);
-let evenArr = arr.filter((num) => num % 2 === 0);
-let prodArr = arr.reduce((total, currentItem) => {
-    return total * currentItem;
-})
+function sumOfTripledEvents(arr) {
+    return arr
+    .filter((num) => num % 2 === 0)
+    .map((num) => num * 3)
+    .reduce((total, current) => total + current)
+}
 
-console.log(addedArr);
-console.log(evenArr);
-console.log(prodArr)
+console.log(sumOfTripledEvents(arr))
