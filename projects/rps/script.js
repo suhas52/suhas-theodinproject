@@ -8,6 +8,8 @@ const choices = ["rock", "paper", "scizzors"];
 const currentStatus = document.querySelector(".current-status");
 const retrybtn = document.createElement("button");
 retrybtn.textContent = "Retry?";
+retrybtn.classList.add("retrybtn")
+
 let cpu_choice = genCpuImg();
 const rules = {
     rock: "paper",
@@ -75,28 +77,3 @@ userSection.addEventListener("click", handleUserClick);
 retrybtn.addEventListener("click", () => {
     location.reload()
 });
-
-// userSection.addEventListener("click", function (e) {
-//     let user_choice = e.target.id;
-//     let scoreCheck = checkResult(user_choice, cpu_choice);
-//     if (scoreCheck == "win") {
-//         userScoreValue += 1;
-//         userScore.textContent = userScoreValue;
-//         currentStatus.textContent = "You got a point!";
-//     }
-//     else if (scoreCheck == "loss") {
-//         cpuScoreValue += 1;
-//         cpuScore.textContent = cpuScoreValue;
-//         currentStatus.textContent = "Your opponent got a point!";
-//     }
-//     else {
-//         currentStatus.textContent = "That was a draw!"
-//     }
-//     cpu_choice = genCpuImg();
-// });
-
-
-console.log(userSection)
-
-
-

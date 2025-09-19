@@ -10,9 +10,19 @@ body {
     flex-direction: column;
 }
 
-div {
-    border: solid black 2px;
+.main-container {
+    width: 80%;       
+    height: 70vh;    
+    margin: 0 auto;    
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: solid black 5px;
+    border-radius: 12px;    
+    box-sizing: border-box;
 }
+
 
 .cpu-section,
 .user-section {
@@ -55,3 +65,15 @@ p {
     font-size: 17pt;
 }
 
+.user_score,
+.cpu_score {
+    font-weight: bold;
+}
+
+.retrybtn {
+    width: 100px;
+    height: 50px;
+    font-size: large;
+    font-family: serif;
+    border-radius: 5px;
+}
