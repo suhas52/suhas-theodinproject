@@ -12,7 +12,7 @@ body {
 
 .main-container {
     height: 90vh;
-    aspect-ratio:  9 /16 ;
+    width: 50vw ;
 }
 
 div {
@@ -37,9 +37,17 @@ div {
 .screen {
     width: 90%;
     height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons {
     width: 90%;
     aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3px;
 }
