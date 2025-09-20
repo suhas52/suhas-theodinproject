@@ -29,14 +29,14 @@ newdiv.appendChild(newh1);
 newdiv.appendChild(newp);
 container.appendChild(newdiv)
 
-const btn = document.createElement("button");
-btn.textContent = "Click me!";
+const button = document.createElement("button");
 
 function hello() {
-    btn.addEventListener("click", () => {
-        alert("Hello, World!");
+    button.addEventListener("click", () => {
+        alert("hello, world!")
     });
 };
 
-newdiv.appendChild(btn)
+container.appendChild(button)
+
 hello()
