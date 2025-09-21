@@ -39,7 +39,7 @@ buttonElements.map((btnNmb) => {
     const key = `btn${btnNmb}`;
     elements[key] = document.createElement("button");
     elements[key].style.width = "23%";
-    elements[key].style.height = "25%";
+    elements[key].style.height = "15%";
     elements[key].id = key;
     elements[key].textContent = btnNmb
     buttons.appendChild(elements[key])

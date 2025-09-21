@@ -11,14 +11,17 @@ body {
 }
 
 .main-container {
-    height: 90vh;
-    width: 50vw ;
-}
-
-div {
+    margin-top: 50px;
+    height: 300px;
+    width: 170px;
     border: solid black 2px;
     border-radius: 5px;
 }
+
+/* div {
+    border: solid black 2px;
+    border-radius: 5px;
+} */
 
 .screen-container {
     height: 25%;
@@ -40,6 +43,8 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: solid black 2px;;
+    border-radius: 10px;
 }
 
 .buttons {
