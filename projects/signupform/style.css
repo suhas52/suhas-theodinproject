@@ -1,0 +1,105 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url("Norse-Bold.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+
+}
+
+
+
+.main-container {
+    width: 60vw;
+    height: 100vh;
+}
+
+.bg-container {
+    width: 40vw;
+    height: 100vh;
+}
+
+.intro-container,
+.buttons-container {
+    width: 100%;
+    height: 35%;
+    background-color: #f9fafb;
+}
+
+.form-container {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: large;
+    padding: 0px 20px 20px 50px;
+}
+
+
+
+button {
+    background-color: #596d48;
+    border-radius: 5px;
+    height: 50px;
+    width: 180px;
+    font-size: 15pt;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    font-size: 15pt;
+    
+}
+
+.tmp {
+    width: 40%;
+    height: 20%;
+    padding-left: 50px;
+
+}
+
+input {
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.text-container {
+    width: 70%;
+    height: 30%;
+}
+
+.text-container p {
+    font-size: larger;
+}
+
+legend {
+    font-size: larger;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    font-weight: bold;
+}

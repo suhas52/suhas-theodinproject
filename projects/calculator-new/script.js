@@ -64,7 +64,7 @@ function calc(e) {
         location.reload();
     }
 
-    if (buttonNumerals.includes(target) && first_iteration == true) {
+    if ((buttonNumerals.includes(target) || target === "-") && first_iteration == true) {
         leftOperandSpan.textContent += target;
     }
     if (buttonOperators.includes(target) && target !== "=") {
