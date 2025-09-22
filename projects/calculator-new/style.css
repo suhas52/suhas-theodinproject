@@ -51,3 +51,18 @@ div {
     height: 40%;
     width: 80%;
 }
+
+.screen div {
+    height: 50%;
+}
+
+.operation-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
