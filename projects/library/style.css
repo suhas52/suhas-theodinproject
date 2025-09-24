@@ -17,5 +17,9 @@ body > * {
 .main-container {
     width: 90vw;
     height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
 }
 
