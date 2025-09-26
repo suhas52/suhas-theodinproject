@@ -1,6 +1,7 @@
 export class Players {
-    constructor() {
+    constructor(playerNo) {
         this.currentTiles = [];
+        this.playerNo = playerNo;
     }
 
     getTiles(choice) {

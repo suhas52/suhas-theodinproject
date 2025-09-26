@@ -1,6 +1,7 @@
 export class DOM {
     constructor() {
         this.gameCont = document.querySelector(".game-container");
+        this.currentPlayer = document.querySelector(".current-player");
     }
     
     drawBoard(object) {
