@@ -12,17 +12,11 @@ export class GameBoard {
         ];
         this.count = 1;
     }
-
-    checkWinner(tiles) {
-        console.log("whatwa")
-        for (let i = 0; i <= this.winningTiles.length; i++) {
-            console.log("test")
-            if (tiles.every(r=> this.winningTiles[i].includes(r)))
-            {
-                return true;
-            }
-            
-        }
+    
+    checkWinner(playerTiles) {
+        return this.winningTiles.some(combo =>
+            combo.every(tile => playerTiles.includes(tile))
+        );
     }
 }
 
