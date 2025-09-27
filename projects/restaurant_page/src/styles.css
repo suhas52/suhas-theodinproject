@@ -3,3 +3,37 @@
    padding: 0;
    box-sizing: border-box;
 }
+
+
+body {
+   display: grid;
+   grid-template-rows: 10vh 80vh 10vh;
+   grid-template-columns: 80vw;
+   justify-content: center;
+   align-items: center;
+}
+
+body > * { 
+   border: solid black 2px;
+}
+
+#content,
+#footer,
+header {
+   height: 100%;
+}
+
+header {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+}
+
+button {
+   width: 20vw;
+   height: 5vh;
+   background-color: gray;
+   font-size: larger;
+   font-weight: bold;
+   color: white;
+}
