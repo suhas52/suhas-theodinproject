@@ -1,9 +1,16 @@
-export default class Todo {
-    constructor(title, duedate, priority, notes = '', description) {
+export class Todo {
+    constructor(title, dueDate, priority, notes, description) {
         this.title = title;
-        this.duedate = duedate;
+        this.dueDate = dueDate;
         this.priority = priority;
-        this.description = description;
         this.notes = notes;
+        this.description = description;
+    }
+    static currentProject = "default";
+    static createTodo(title, dueDate, priority, notes = '', description = '') {
+        return new Todo(title,dueDate, priority, notes, description);
+    }
+    static createProjects() {
+        return [];
     }
 }
