@@ -1,3 +1,5 @@
+import { Todo } from "./todo"
+
 export class DOM {
     constructor() {
         this.projectsCont = document.getElementById("projects-container");
@@ -5,9 +7,12 @@ export class DOM {
         this.newProjectBtn = document.getElementById("new-project");
         this.newTodoBtn = document.getElementById("new-todo");
         this.todoModal = document.getElementById("todo-modal");
-        this.submitTodoModal = document.getElementById("submit-todo-modal");
         this.closeTodoModal = document.getElementById("close-todo-modal");
-
+        this.toDoForm = document.getElementById("todo-form");
+        this.projectModal = document.getElementById("project-modal");
+        this.projectForm = document.getElementById("project-form");
+        this.closeProjectModal = document.getElementById("close-project-modal");
+        
     }
     
     displayTodos(project) {
@@ -17,20 +22,27 @@ export class DOM {
         currentProject.textContent = project.title;
         this.projectsCont.append(currentProject);
         project.forEach((todo) => {
-        const card = this.createCard();
+            const card = this.createCard();
             const title = document.createElement("h3");
             title.textContent = todo.title;
             const description = document.createElement("p");
             description.textContent = todo.description;
-            card.append(title, description);
+            const delBtn = document.createElement("button");
+            delBtn.textContent = "Delete Todo";
+            delBtn.id = `del-todo-${title}`;
+            card.append(title, description, delBtn);
             this.projectsCont.append(card);
-            console.log("test")
-    })
+        })
+        
     }
-
     
-
+    deleteTodo(target, project) {
+        
+    }
+    
+    
     displayProjects(projects) {
+        this.projectList.innerHTML = '';
         for (let key in projects) {
             const div = document.createElement("div");
             div.style.width = "100%";
@@ -39,19 +51,36 @@ export class DOM {
         }
     }
     
+    changeProject(targetProject) {
+        const currentProject = document.getElementById("current-project");
+        currentProject.textContent = targetProject;
+    }
+    
     createCard() {
         const card = document.createElement("div");
         card.style.width = "25%";
         card.style.height = "25%";
         return card;
     }
-
+    
     showDialog(target) {
         const dialog = document.querySelector("dialog")
         dialog.showModal(); 
     }
-
+    
     getCurrentProject() {
-        document.getElementById("current-project").textContent;
+        return document.getElementById("current-project").textContent;
+    }
+    
+    saveToLocal(projects) {
+        localStorage.setItem("projects", JSON.stringify(projects));
+    }
+    
+    getFromLocal() {
+        const stored = localStorage.getItem("projects");
+        
+        if (stored) {
+            return JSON.parse(stored);
+        }
     }
 }

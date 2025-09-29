@@ -1,10 +1,19 @@
 create todo class that'll have title, description, dueDate, priority and notes.
+
 create a default todo project that'll hold todos if a project isn't specified.
+
 write a function that'll create a new array if the user wants a new project to hold the todos.
+
 create an object that'll hold the project arrays that contain the object for each todo.
+
 create a class for everything DOM manipulation related.
+
 the UI should show the todo in the default project when opened.
+
 there should be a way to view all the projects and click them to get the todo in the said project.
+
 a way to add new todo or delete existing todo in the current project.
+
 store the objects created by the todo class into localstorage by using json.stringify and restore them on startup with json.parse.
+
 make sure the app doesn't crash if there's no data currently in the localstorage

@@ -8,34 +8,38 @@
 <body>
     <header>Your Todo List!</header>
     <nav id="nav">
-        <button class="new-project">New Project</button>
+        <button id="new-project">New Project</button>
+        <dialog id="project-modal">
+            <form id="project-form" method="dialog">
+                <input required placeholder="Project Title" name="title" type="text">
+                
+                <button type="submit" id="submit-project-modal">Save</button>
+            </form>
+            <button id="close-project-modal">Close</button>
+        </dialog>
         <h4>Projects</h4>
-        <div id="project-list"></div>
+        <div id="project-list">
+            
+        </div>
     </nav>
     <main>
         <h2>Todos</h2>
         <button id="new-todo">New Todo</button>
         <dialog id="todo-modal">
             <h2>Enter your Todo</h2>
-            <form method="dialog">
-                <input name="title" placeholder="title" type="text" />
-                <input name="dueDate" placeholder="Due date" type="date" />
-                <input name="priority" placeholder="priority" type="number" />
-                <input name="notes" placeholder="notes" type="text" />
+            <form id="todo-form" method="dialog">
+                <input required name="title" placeholder="title" type="text" />
+                <input required name="dueDate" placeholder="Due date" type="date" />
+                <input required name="priority" placeholder="priority" type="number" />
+                <input required name="notes" placeholder="notes" type="text" />
                 <input name="description" placeholder="description" type="text" />
-                <button id="close-todo-modal">Close</button>
-                <button id="submit-todo-modal">Save</button>
+                <button type="submit">Save</button>
             </form>
+            <button id="close-todo-modal">Close</button>
             
         </dialog>
         <div id="projects-container">
-            <dialog id="project-modal">
-                <form methond="dialog">
-                    <input placeholder="Project Title" type="text">
-                    <button id="close-project-modal">Close</button>
-                    <button id="submit-project-modal">Save</button>
-                </form>
-            </dialog>
+            
         </div>
     </main>
 </body>
