@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+#main-container {
+    width: 90vw;
+    height: 90vh;
+    border: solid black 1px;
+    background-image: url(https://placehold.co/600x400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
