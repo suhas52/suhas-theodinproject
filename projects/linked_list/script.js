@@ -10,15 +10,65 @@ class LinkedList {
     }
     
     link(node, previousNode) {
-        if (!previousNode) {
+        if (previousNode === null) {
             this.head = node;
         }
-        if (!previousNode.nextNode) {
-            previousNode.nextNode = node;
+        else if (previousNode.nextnode === null) {
+            previousNode.nextnode = node;
         }
         else {
-            this.link(node,previousNode.nextNode)
+            this.link(node, previousNode.nextnode)
         }
+    }
+    
+    prepend(value) {
+        const newNode = new Node(value);
+        newNode.nextnode = this.head;
+        this.head = newNode;
+    }
+    
+    size(node = this.head) {
+        if (!node) return 0;              
+        return 1 + this.size(node.nextnode);  
+    }
+    
+    getHead() {
+        return this.head;
+    }
+    
+    getTail(node = this.head) {
+        while (true) {
+            if (node.nextnode === null) {
+                return node;
+            }
+            else {
+                node = node.nextnode;
+            }
+        }
+    }
+    
+    at(index, node = this.head, count = 0) {
+        while (true) {
+            if (index === count) {
+                return node;
+            }
+            else {
+                count++;
+                node = node.nextnode;
+            }
+        }
+    }
+    
+    pop(node = this.head) {
+        while (true) {
+            if (node.nextnode.nextnode === null) {
+                node.nextnode = null;
+                return;
+            }
+            else {
+                node = node.nextnode;
+            }
+        }        
     }
 }
 class Node {
@@ -29,6 +79,13 @@ class Node {
 }
 
 let ll = new LinkedList();
-ll.append("bro");
-ll.append("sis");
-console.log(ll)
+ll.append("test1");
+ll.append("test2");
+ll.append("test3");
+ll.append("test4");
+ll.append("test5");
+ll.prepend("test0");
+ll.append("test6");
+console.log(ll.size())
+ll.pop();
+console.log(ll.size())
