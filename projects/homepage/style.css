@@ -1,7 +1,9 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Roboto, sans-serif;
+    font-size: 2vh;
 }
 
 .top-background {
@@ -16,8 +18,94 @@
     
 }
 
-img {
+.img-container {
+    width: 400px;
+}
+
+.pic {
     object-fit: cover; 
     width: 100%;
     height: auto;
 }
+
+header {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-me-card {
+    box-shadow: 10px 5px 5px gray;
+    padding: 2% 0;
+    width: 30%;
+    align-self: center;
+    background-color: white;
+}
+
+
+ul
+{
+    list-style-type: none;
+}
+
+.links-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 10px;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.nameandlinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card {
+    padding: 5px;
+    width: 200px;
+}
+
+footer {
+    background-color: #0891b2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5%;
+    gap: 300px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+@media (max-width: 760px) {
+    .about-me-card {
+        min-width: 80%;
+        height: auto;
+    }
+    
+    .works-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    
+
+    footer {
+        gap: 50px;
+    }
+} 
