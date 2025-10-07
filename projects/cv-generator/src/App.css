@@ -1,0 +1,31 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+}
+
+.user-info-container {
+  min-width: 30vw;
+
+}
+
+.generated-cv {
+  min-width: 70vw;
+}
+
+.generated-cv, .user-info-container {
+  border: solid white 2px;
+  height: 100vh;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 15rem;
+}
