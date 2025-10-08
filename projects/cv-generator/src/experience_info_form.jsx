@@ -7,9 +7,9 @@ function ExperienceInfoForm( {experienceFormData, handleSubmit, handleChange }) 
         <label>Description:</label>
         <input name="experienceDescription" type="text" value={experienceFormData.experienceDescription} onChange={handleChange}/>
         <label>Started:</label>
-        <input name="experienceStarted" type="text" value={experienceFormData.experienceStarted} onChange={handleChange}/>
+        <input name="experienceStarted" type="date" value={experienceFormData.experienceStarted} onChange={handleChange}/>
         <label>Ended:</label>
-        <input name="experienceEnded" type="text" value={experienceFormData.experienceEnded} onChange={handleChange}/>
+        <input name="experienceEnded" type="date" value={experienceFormData.experienceEnded} onChange={handleChange}/>
         <button type="submit">Submit</button>
     </form>
 }

@@ -1,36 +1,7 @@
 import { useState } from 'react';
 
 
-function Generated({ personalFormData, educationFormData, experienceFormData}) {
-    const [generated, setGenerated] = useState({
-        personalName: "",
-        personalPhone: "",
-        personalEmail: "",
-        personalAddress: "",
-        educationMajor: "",
-        educationSchool: "",
-        educationGraduated: "",
-        experienceCompany: "",
-        experiencePosition: "",
-        experienceStarted: "",
-        experienceEnded: "",
-    })
-
-    // setGenerated(() => {
-    //     newGen = {
-    //     personalName: personalFormData.personalName,
-    //     personalPhone: personalFormData.personalPhone,
-    //     personalEmail: personalFormData.personalEmail,
-    //     personalAddress: personalFormData.personalAddress,
-    //     educationMajor: educationFormData.educationMajor,
-    //     educationSchool: educationFormData.educationMajor,
-    //     educationGraduated: educationFormData.educationMajor,
-    //     experienceCompany: educationFormData.educationMajor,
-    //     experiencePosition: educationFormData.educationMajor,
-    //     experienceStarted: educationFormData.educationMajor,
-    //     experienceEnded: educationFormData.educationMajor,
-    //     }
-    // })
+function Generated( {generated} ) {
     
     return <div
     className="generated-cv"
