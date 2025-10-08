@@ -1,5 +1,5 @@
-function PersonalInfoForm({ formData, handleChange }) {
-    return <form
+function PersonalInfoForm({ formData, handleChange, handleSubmit }) {
+    return <form onSubmit={handleSubmit}
         className='form-group jusfity-content-center'>
             <label htmlFor="html">Name:</label>
             <input type="text" name="name" value={formData.name} onChange={handleChange}/>
