@@ -1,52 +1,35 @@
 import { useState } from 'react';
 import PersonalInfoForm from './personal_info_form'
+import EducationInfoForm from './education_info_form';
+import ExperienceInfoForm from './experience_info_form'
 
 
-function Generator() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-    })
-    
-    const [isHidden, setIsHidden] = useState({
-        personal: false,
-        education: false,
-        experience: false,
-    });
+function Generator( { personalFormData,educationFormData, experienceFormData, handleEdit, handleSubmit, handleChange, isHidden,  } ) {
     
     
-    function handleChange(e) {
-        const {name, value} = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value,
-        }))
-    }
     
-    const handleSubmit = (section) => (e) => {
-        
-        e.preventDefault();
-        const values = [formData.name, formData.email, formData.phone, formData.address];
-        console.log(values)
-        setIsHidden(prev => ({ ...prev, [section]: true }));
-        
-    }
     
-    const handleEdit = (section) => (e) => {
-        e.preventDefault();
 
-        setIsHidden(prev => ({ ...prev, [section]: false}))
-    }
     
     return <div
     className="user-info-container"
     >
-    {!isHidden.personal ? <PersonalInfoForm formData={formData} 
+    {!isHidden.personal ? <PersonalInfoForm personalFormData={personalFormData} 
     handleChange={handleChange} 
     handleSubmit={handleSubmit('personal')}/> : <button onClick={handleEdit('personal')}>Edit</button>}
+    
+    {!isHidden.education ? <EducationInfoForm educationFormData={educationFormData} 
+    handleChange={handleChange} 
+    handleSubmit={handleSubmit('education')}/> : <button onClick={handleEdit('education')}>Edit</button>}
+
+    {!isHidden.experience ? <ExperienceInfoForm experienceFormData={experienceFormData} 
+    handleChange={handleChange} 
+    handleSubmit={handleSubmit('experience')}/> : <button onClick={handleEdit('experience')}>Edit</button>}
+
     </div>
+
+    
+
 }
 
 export default Generator;

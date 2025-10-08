@@ -1,14 +1,13 @@
-function PersonalInfoForm({ formData, handleChange, handleSubmit }) {
-    return <form onSubmit={handleSubmit}
-        className='form-group jusfity-content-center'>
+function PersonalInfoForm({ personalFormData, handleChange, handleSubmit }) {
+    return <form onSubmit={handleSubmit}>
             <label htmlFor="html">Name:</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange}/>
+            <input type="text" name="personalName" value={personalFormData.personalName} onChange={handleChange}/>
             <label htmlFor="html">Email:</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange}/>
+            <input type="email" name="personalEmail" value={personalFormData.personalEmail} onChange={handleChange}/>
             <label htmlFor="html">Phone:</label>
-            <input type="number" name="phone" value={formData.phone} onChange={handleChange}/>
+            <input type="number" name="personalPhone" value={personalFormData.personalPhone} onChange={handleChange}/>
             <label htmlFor="html">Address:</label>
-            <input type="text" name="address" value={formData.address} onChange={handleChange}/>
+            <input type="text" name="personalAddress" value={personalFormData.personalAddress} onChange={handleChange}/>
             <button type="submit">Submit</button>
         </form>
 }

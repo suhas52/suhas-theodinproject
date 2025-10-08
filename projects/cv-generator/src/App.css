@@ -18,14 +18,23 @@ main {
 
 .generated-cv {
   min-width: 70vw;
+  display: flex;
+  justify-content: center;
+  border: solid black  1px;
 }
 
 .generated-cv, .user-info-container {
-  border: solid white 2px;
+  border: solid black 1px;
   height: 100vh;
 }
 
 form {
   display: grid;
   grid-template-columns: 15rem;
+}
+
+.personal-info,
+.education-info,
+.experience-info {
+  text-align: center;
 }
