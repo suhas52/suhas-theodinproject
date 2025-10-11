@@ -7,7 +7,10 @@ function GetSprites({ scoreCount, sprites, handleClick }) {
     const pokemonStyle = {
         textAlign: 'center',
         textTransform: 'capitalize',
-        color: 'white'
+        color: '#333333',
+        fontFamily: '"Press Start 2P", cursive',
+        fontSize: "1rem",
+        paddingTop: "10px"
     };
     
     const cardStyle = {

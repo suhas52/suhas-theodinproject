@@ -12,7 +12,7 @@ function getPokemonSprites(index) {
 }
 
 
-function Game({ count=100 }) {
+function Game({ count=50 }) {
     
     const [sprites, setSprites] = useState([]);
     if (!localStorage.getItem('BestScore')) {
