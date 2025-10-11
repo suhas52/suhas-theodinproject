@@ -8,4 +8,35 @@
 body {
     padding: 0px;
     margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
+
+.card {
+    width: 15rem;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+}
+
+.score-container {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    font-weight: 500;
+}
+
+.score-container > p {
+    border: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
