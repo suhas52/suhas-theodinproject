@@ -29,13 +29,12 @@ function GetSprites({ scoreCount, sprites, handleClick }) {
     }, [sprites, scoreCount]);
     
     return <div className="pokemon-grid">
-    {/* {console.log(currentPokemonArray)} */}
     {currentPokemonArray.map((pokemon) => {
         return (
             <Card style={cardStyle} key={pokemon.name} className="card">
             <h4 style={pokemonStyle}>{pokemon.name}</h4>
             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-            <Button onClick={() => handleClick(pokemon.name)} id={pokemon.id}>Choose!</Button>
+            <Button onClick={() => handleClick(pokemon.name)} id={pokemon.id}>Choose {pokemon.name}!</Button>
             </Card>
         )
     })}

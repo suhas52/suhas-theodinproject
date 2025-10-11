@@ -15,13 +15,23 @@ function getPokemonSprites(index) {
 function Game({ count=100 }) {
     
     const [sprites, setSprites] = useState([]);
+    if (!localStorage.getItem('BestScore')) {
+        const initialScoreCount = {
+            score: 0,
+            bestScore: 0,
+            clicked: [],
+            lost: false
+        };
+        localStorage.setItem('BestScore', 0);
+    }
+    
     const initialScoreCount = {
         score: 0,
-        BestScore: 0,
+        BestScore: localStorage.getItem("BestScore"),
         clicked: [],
         lost: false
     }
-
+    
     
     const [scoreCount, setScoreCount] = useState(initialScoreCount);
     
@@ -29,7 +39,7 @@ function Game({ count=100 }) {
         console.log("test1")
         setScoreCount(initialScoreCount)
     }
-
+    
     useEffect(() => {
         async function loadAllSprites() {
             const promises = [];
@@ -45,20 +55,23 @@ function Game({ count=100 }) {
         
         loadAllSprites();
     }, [count]);
-
+    
     function handleClick(name) {
         if (scoreCount.clicked.includes(name)) {
             setScoreCount(prev => ({
                 ...prev,
                 lost: true,
             }))
+            if (scoreCount.score > scoreCount.BestScore) {
+                localStorage.setItem('BestScore', scoreCount.score);
+            }
         }
         else {
             setScoreCount(prev => ({
-            ...prev,
-            score: prev.score + 1,
-            clicked: [...prev.clicked, name]
-        }))
+                ...prev,
+                score: prev.score + 1,
+                clicked: [...prev.clicked, name]
+            }))
         }
         
     }
@@ -66,8 +79,8 @@ function Game({ count=100 }) {
     return <>
     <ReactNavBar handleResetGame={handleResetGame}/>
     <div className='score-container'>
-        <p>Score: {scoreCount.score}</p>
-        <p>Your Best: {scoreCount.BestScore}</p>
+    <p>Score: {scoreCount.score}</p>
+    <p>Your Best: {scoreCount.BestScore}</p>
     </div>
     <ShowModal scoreCount={scoreCount} handleResetGame={handleResetGame}/>
     <GetSprites scoreCount={scoreCount} sprites={sprites} handleClick={handleClick}/>

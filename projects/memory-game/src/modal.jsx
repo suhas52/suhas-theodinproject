@@ -12,15 +12,14 @@ function ShowModal({ scoreCount, handleResetGame }) {
   return (
     <>
       <Modal show={show}>
-        <Modal.Header>
+        <Modal.Header closeButton>
           <Modal.Title>Game Over</Modal.Title>
         </Modal.Header>
-        <Modal.Body>You lost!</Modal.Body>
+        <Modal.Body>You lost! Your score was {scoreCount.score}.</Modal.Body>
         <Modal.Footer>
           <Button onClick={() => handleResetGame()} variant="danger">
             Retry
           </Button>
-          <Modal.Header closeButton></Modal.Header>
         </Modal.Footer>
       </Modal>
     </>
