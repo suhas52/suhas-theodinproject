@@ -73,3 +73,9 @@ body {
     justify-content: space-between;
 }
 
+.welcomecard {
+  background-color: rgba(98, 255, 0, 0.6);
+  padding: 15px;
+  border: solid white 1px;
+  border-radius: 10px;
+}
