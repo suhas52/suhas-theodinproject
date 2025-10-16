@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import Nameform from './components/newnameform';
 
 function App() {
 
@@ -10,9 +11,12 @@ function App() {
   }, [])
 
   return (
-    usernames.map((username) => {
+    <div className = "usernames">
+      <Nameform />
+    {usernames.map((username) => {
       return <div key={username.id}>{username.username}</div>
-    })
+    })}
+    </div>
   )
 }
 

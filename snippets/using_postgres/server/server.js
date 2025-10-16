@@ -11,12 +11,11 @@ app.use(cors(corsOptions))
 
 app.get("/", async (req, res) => {
     const tmp = await db.getAllUsernames();
-    console.log(tmp)
     res.send(tmp);
 })
 
 app.post("/new", (res, req) => {
-    console.log("Username to be saved: ", req.body.username)
+    console.log("Username to be saved: ", req.body)
     db.insertUsername("suhas")
 })
 
