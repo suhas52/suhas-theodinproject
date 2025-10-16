@@ -10,7 +10,8 @@ function Nameform() {
         })
     }
     
-    const handleSubmit = async() => {
+    const handleSubmit = async(e) => {
+        e.preventDefault();
         const response = await fetch("http://localhost:8000/new", {
             method: "POST",
             headers: {
@@ -19,7 +20,7 @@ function Nameform() {
             body: JSON.stringify( formData ),
         });
         
-        const data = await response.json();
+        const data = await response;
         console.log("Response from server:", data);
         console.log(formData)
         
